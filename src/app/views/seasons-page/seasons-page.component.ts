@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ISeasonItem, IData, FormulaoneApiService } from '../../services/formulaone-api.service'
+import { ISeasonItem, ISeasons, FormulaoneApiService } from '../../services/formulaone-api.service'
 
 @Component({
   selector: 'app-seasons-page',
@@ -14,9 +14,8 @@ export class SeasonsPageComponent implements OnInit {
   ngOnInit(): void {
     // faz a chamada do serviço de busca de Seasons
     this.formulaoneApiService.getAllSeasons()
-      .subscribe((seasonsList: IData) => {
+      .subscribe((seasonsList: ISeasons) => {
         this.seasons = seasonsList.MRData.SeasonTable.Seasons;
-        console.log('resultado', seasonsList.MRData.SeasonTable.Seasons)
       });
   }
 

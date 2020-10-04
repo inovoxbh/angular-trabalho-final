@@ -9,6 +9,9 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { SeasonsPageComponent } from './views/seasons-page/seasons-page.component';
 import { SeasonsComponent } from './components/seasons/seasons.component';
 import { SeasonComponent } from './components/season/season.component';
+import { RoundsPageComponent } from './views/rounds-page/rounds-page.component';
+import { RoundsComponent } from './components/rounds/rounds.component';
+import { RoundComponent } from './components/round/round.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { SeasonComponent } from './components/season/season.component';
     NavBarComponent,
     SeasonsPageComponent,
     SeasonsComponent,
-    SeasonComponent
+    SeasonComponent,
+    RoundsPageComponent,
+    RoundsComponent,
+    RoundComponent
   ],
   imports: [
     BrowserModule,
