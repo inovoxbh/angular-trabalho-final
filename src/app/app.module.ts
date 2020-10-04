@@ -12,6 +12,8 @@ import { SeasonComponent } from './components/season/season.component';
 import { RoundsPageComponent } from './views/rounds-page/rounds-page.component';
 import { RoundsComponent } from './components/rounds/rounds.component';
 import { RoundComponent } from './components/round/round.component';
+import { ResultsPageComponent } from './views/results-page/results-page.component';
+import { GridPositionComponent } from './components/grid-position/grid-position.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { RoundComponent } from './components/round/round.component';
     SeasonComponent,
     RoundsPageComponent,
     RoundsComponent,
-    RoundComponent
+    RoundComponent,
+    ResultsPageComponent,
+    GridPositionComponent
   ],
   imports: [
     BrowserModule,
