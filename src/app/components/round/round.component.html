@@ -1,2 +1,5 @@
-<p class="list-group-item list-group-item-action">Corrida #{{round.round}} - {{round.raceName}} em {{round.date}}</p>
-<a class="list-group-item list-group-item-action btn btn-success" [routerLink]="['/seasons',round.season,round.round]">Grid de Chegada</a>
+<div class="list-group-item list-group-item-action">
+    <p>Corrida #{{round.round}} - {{round.raceName}} em {{round.date}}</p>
+    <a class="btn btn-success" [routerLink]="['/seasons',round.season,round.round,'grid']">Grid de Chegada</a>
+    <a class="btn btn-info" [routerLink]="['/seasons',round.season,round.round,'teams']">Equipes</a>
+</div>

@@ -118,6 +118,29 @@ export interface IResults {
   }
 }
 
+export interface IConstructorItem {
+  constructorId: string,
+  url: string,
+  name: string,
+  nationality: string
+}
+
+export interface IConstructors {
+  MRData: {
+    xmlns: string,
+    series: string, 
+    url: string, 
+    limit: string,
+    offset: string,
+    total: string,
+    ConstructorTable: {
+      season: string,
+      round: string,
+      Constructors: Array<IConstructorItem>
+    }
+  }
+}
+
 @Injectable({
   providedIn: 'root'
 })
@@ -135,5 +158,9 @@ export class FormulaoneApiService {
 
   getResult(season: string, round: string): Observable<any> {
     return this.http.get<IResults>(withBaseUrl(`${season}/${round}/results.json`));
+  }  
+
+  getConstructors(season: string, round: string): Observable<any> {
+    return this.http.get<IConstructors>(withBaseUrl(`${season}/${round}/constructors.json`));
   }  
 }

@@ -1,5 +1,6 @@
 <div class="toolbar" role="banner">
     <h3>Resultado da Corrida {{round}} da Temporada {{season}}</h3>
+    <a class="btn btn-secondary" [routerLink]="['/seasons',season]">Voltar</a>
     <ul class="list-group">
         <li *ngFor="let position of roundResult"><app-grid-position [position]="position"></app-grid-position></li>
     </ul>    

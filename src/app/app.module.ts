@@ -14,6 +14,8 @@ import { RoundsComponent } from './components/rounds/rounds.component';
 import { RoundComponent } from './components/round/round.component';
 import { ResultsPageComponent } from './views/results-page/results-page.component';
 import { GridPositionComponent } from './components/grid-position/grid-position.component';
+import { ConstructorsPageComponent } from './views/constructors-page/constructors-page.component';
+import { TeamComponent } from './components/team/team.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { GridPositionComponent } from './components/grid-position/grid-position.
     RoundsComponent,
     RoundComponent,
     ResultsPageComponent,
-    GridPositionComponent
+    GridPositionComponent,
+    ConstructorsPageComponent,
+    TeamComponent
   ],
   imports: [
     BrowserModule,

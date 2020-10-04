@@ -1,0 +1,7 @@
+<div class="toolbar" role="banner">
+    <h3>Equipes da Corrida {{round}} da Temporada {{season}}</h3>
+    <a class="btn btn-secondary" [routerLink]="['/seasons',season]">Voltar</a>
+    <ul class="list-group">
+        <li *ngFor="let team of roundConstructors"><app-team [team]="team"></app-team></li>
+    </ul>    
+</div>

@@ -1,4 +1,5 @@
 <div class="toolbar" role="banner">
     <h3>Corridas da Temporada {{season}}</h3>
+    <a class="btn btn-secondary" [routerLink]="['/seasons']">Voltar</a>
     <app-rounds [rounds]="seasonRounds"></app-rounds>
 </div>
