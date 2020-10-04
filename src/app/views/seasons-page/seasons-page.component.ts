@@ -15,7 +15,7 @@ export class SeasonsPageComponent implements OnInit {
     // faz a chamada do serviço de busca de Seasons
     this.formulaoneApiService.getAllSeasons()
       .subscribe((seasonsList: ISeasons) => {
-        this.seasons = seasonsList.MRData.SeasonTable.Seasons;
+        this.seasons = seasonsList.MRData.SeasonTable.Seasons.sort((a,b) => 0 - (a > b ? -1 : 1));
       });
   }
 

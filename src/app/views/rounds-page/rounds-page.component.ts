@@ -22,9 +22,6 @@ export class RoundsPageComponent implements OnInit {
       subscribe((roundsList: IRounds) => {
         this.seasonRounds = roundsList.MRData.RaceTable.Races;
         this.season = roundsList.MRData.RaceTable.season;
-
-        console.log('seasonRounds', this.seasonRounds)
-        console.log('season', this.season)
       });
     });
   }
