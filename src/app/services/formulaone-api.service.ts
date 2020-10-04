@@ -10,9 +10,18 @@ export interface ISeasonItem {
   url: string
 }
 
-// define a sintaxe do resultado da API que retorna todas as seasons: um array de seasons conforme interface definida acima.
-export interface ISeasonsResult {
-  Seasons: Array<ISeasonItem>;
+export interface IData {
+  MRData: {
+    xmlns: string,
+    series: string, 
+    url: string, 
+    limit: string,
+    offset: string,
+    total: string,
+    SeasonTable: {
+      Seasons: Array<ISeasonItem>;
+    }
+  }
 }
 
 @Injectable({
@@ -25,6 +34,6 @@ export class FormulaoneApiService {
   // método que irá buscar todas as seasons retornando um Observable
   getAllSeasons(): Observable<any> {
     // busca as seasons retornando um array do tipo ISeasonsResult
-    return this.http.get<ISeasonsResult>(withBaseUrl('seasons.json'));
+    return this.http.get<IData>(withBaseUrl('seasons.json?limit=71'));
   }
 }
